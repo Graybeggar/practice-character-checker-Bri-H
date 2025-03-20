@@ -6,9 +6,14 @@ let userInput = readlineSync.question('Please enter a word or phrase: ');
 // Step 2: Prompt the user for an index number
 let index = parseInt(readlineSync.question('Enter the index of the character you want to find: '));
 
-// Step 3: Use bracket notation to access the character at the provided index
-let character = userInput[index];
-
-// Step 4: Print out the character
+// Step 3: Check if the index is valid before trying to access the character
 if (index >= 0 && index < userInput.length) {
+  // Step 4: Use bracket notation to access the character at the provided index
+  let character = userInput[index];
+  
+  // Print out the character
   console.log(`The character at index ${index} is: ${character}`);
+} else {
+  // Handle invalid index
+  console.log('The index you entered is out of range.');
+}
