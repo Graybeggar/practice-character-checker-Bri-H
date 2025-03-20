@@ -12,6 +12,3 @@ let character = userInput[index];
 // Step 4: Print out the character
 if (index >= 0 && index < userInput.length) {
   console.log(`The character at index ${index} is: ${character}`);
-} else {
-  console.log('The index you entered is out of range.');
-}  
